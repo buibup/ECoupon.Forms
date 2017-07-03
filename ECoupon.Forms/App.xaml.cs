@@ -5,7 +5,7 @@ namespace ECoupon.Forms
 {
     public partial class App : Application
     {
-
+        public static bool IsWindows10 { get; set; }
 		public static bool IsUserLoggedIn { get; set; }
 
 		public App()
