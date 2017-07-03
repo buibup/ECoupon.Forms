@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Net;
 
 namespace ECoupon.Forms.Droid
 {
@@ -17,6 +18,10 @@ namespace ECoupon.Forms.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+
+			ServicePointManager
+			.ServerCertificateValidationCallback +=
+			(sender, cert, chain, sslPolicyErrors) => true;
 
             base.OnCreate(bundle);
 
